@@ -1,0 +1,20 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker/db/data
+
+# Adomin only
+admin_configs/*
+
+# 設計
+設計/アプリコンセプト.md
+
+# Environments
+*.env
+*.env.local
+docker/.env
+.env
+.env.*
+!*.env.example

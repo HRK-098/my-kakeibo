@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* 
+ * 手動ダークモードの有効化
+ * 'dark' バリアントを class="dark" の時のみ適用するように上書き
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Safe Area サポート */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
+
+/* 
+ * html全体への設定
+ * htmlにdarkクラスがついている場合は dark color-scheme を適用
+ */
+html.dark {
+  color-scheme: dark;
+}
